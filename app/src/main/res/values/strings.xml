@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidTests</string>
+    <string name="text_iam">I am %s$1</string>
 </resources>
