@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidTests</string>
+    <string name="toast_short_name">A short name</string>
 </resources>
