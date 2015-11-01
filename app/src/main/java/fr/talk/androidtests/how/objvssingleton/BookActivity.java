@@ -1,4 +1,4 @@
-package fr.talk.androidtests.objvssingleton;
+package fr.talk.androidtests.how.objvssingleton;
 
 import android.app.Activity;
 import android.os.Bundle;

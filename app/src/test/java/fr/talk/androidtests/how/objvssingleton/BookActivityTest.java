@@ -1,4 +1,4 @@
-package fr.talk.androidtests.objvssingleton;
+package fr.talk.androidtests.how.objvssingleton;
 
 import android.annotation.SuppressLint;
 import android.view.View;

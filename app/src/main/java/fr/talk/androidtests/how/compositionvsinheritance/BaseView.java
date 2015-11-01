@@ -1,4 +1,4 @@
-package fr.talk.androidtests.compositionvsinheritance;
+package fr.talk.androidtests.how.compositionvsinheritance;
 
 import android.content.Context;
 import android.support.annotation.StringRes;

@@ -1,4 +1,4 @@
-package fr.talk.androidtests.objvsstatic;
+package fr.talk.androidtests.how.objvsstatic;
 
 import android.annotation.SuppressLint;
 import android.view.View;
