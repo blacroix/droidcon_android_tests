@@ -13,6 +13,7 @@ android {
 
         testInstrumentationRunner "fr.talk.androidtests.CustomRobolectricTestRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -33,9 +34,9 @@ dependencies {
     //region Unit test dependencies
     testCompile(
             'junit:junit:4.12',
-            'org.assertj:assertj-core:2.2.0',
             'org.mockito:mockito-core:1.10.19',
-            'org.robolectric:robolectric:3.0'
+            'org.robolectric:robolectric:3.0',
+            'pl.pragmatists:JUnitParams:1.0.4'
     )
 
     testCompile('com.squareup.assertj:assertj-android:1.1.1') {
