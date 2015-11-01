@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">AndroidTests</string>
     <string name="toast_short_name">A short name</string>
+    <string name="hint_login">Login</string>
+    <string name="hint_password">Password</string>
+    <string name="action_connect">Connect</string>
+    <string name="toast_success_login">User logged</string>
 </resources>
