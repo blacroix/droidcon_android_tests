@@ -8,6 +8,8 @@ import org.robolectric.Robolectric;
 
 import fr.talk.androidtests.CustomRobolectricTestRunner;
 
+import static org.assertj.android.api.Assertions.*;
+
 @RunWith(CustomRobolectricTestRunner.class)
 public class FormActivityTest {
 
@@ -21,6 +23,6 @@ public class FormActivityTest {
     @Test
     public void testOnCreate() throws Exception {
         Assertions.assertThat(activity.loginEditText).isNotNull();
-        org.assertj.android.api.Assertions.assertThat(activity.loginEditText).isVisible();
+        assertThat(activity.loginEditText).isVisible();
     }
 }
