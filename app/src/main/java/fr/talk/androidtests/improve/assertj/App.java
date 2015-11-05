@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 public class App implements Comparable<App> {
+
     private final String packageName;
     private final float note;
 
@@ -12,19 +13,14 @@ public class App implements Comparable<App> {
         this.note = note;
     }
 
-    public String getPackageName() {
-        return packageName;
-    }
-
-    public float getNote() {
-        return note;
-    }
-
+    //region compare
     @Override
     public int compareTo(@Nullable App another) {
-        return another == null ? 1 : Float.compare(note, another.note);
+        return another == null ? -1 : Float.compare(note, another.note);
     }
+    //endregion
 
+    //region equals
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -35,9 +31,12 @@ public class App implements Comparable<App> {
         return packageName.equals(app.packageName);
 
     }
+    //endregion
 
+    //region hashCode
     @Override
     public int hashCode() {
         return packageName.hashCode();
     }
+    //endregion
 }

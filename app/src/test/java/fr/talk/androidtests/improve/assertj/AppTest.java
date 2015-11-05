@@ -1,8 +1,9 @@
 package fr.talk.androidtests.improve.assertj;
 
-import org.junit.Test;
+import junit.framework.Assert;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.assertj.core.api.Assertions;
+import org.junit.Test;
 
 public class AppTest {
 
@@ -11,6 +12,14 @@ public class AppTest {
         App lowRateApp = new App("com.test", 2.2f);
         App highRateApp = new App("com.google", 4.1f);
 
-        assertThat(highRateApp).isGreaterThan(lowRateApp);
+        float compareTo = lowRateApp.compareTo(highRateApp);
+
+        //region
+        Assert.assertTrue(compareTo < 1);
+        //endregion
+
+        //region assertJ
+        Assertions.assertThat(highRateApp).isGreaterThan(lowRateApp);
+        //endregion
     }
 }
