@@ -3,10 +3,21 @@ package fr.talk.androidtests.how.compositionvsinheritance;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.widget.TextView;
 
 import fr.talk.androidtests.R;
 
 public class ProfileView extends BaseView {
+
+
+    //region composition view manager
+    TextView nameTextView;
+    ViewManager viewManager = new ViewManager();
+    //endregion
+
+    //region composition messenger
+    Messenger messenger = new Messenger(getContext());
+    //endregion
 
     public ProfileView(Context context) {
         this(context, null);
@@ -18,6 +29,11 @@ public class ProfileView extends BaseView {
 
     public ProfileView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        //region composition view manager
+        inflate(getContext(), R.layout.custom_view, this);
+
+        nameTextView = (TextView) findViewById(R.id.nameTextView);
+        //endregion
     }
 
     @SuppressLint("SetTextI18n")
