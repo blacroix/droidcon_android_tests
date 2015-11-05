@@ -1,14 +1,12 @@
 package fr.talk.androidtests.how.mvp;
 
-import org.assertj.core.api.Assertions;
+import org.assertj.android.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 
 import fr.talk.androidtests.CustomRobolectricTestRunner;
-
-import static org.assertj.android.api.Assertions.*;
 
 @RunWith(CustomRobolectricTestRunner.class)
 public class FormActivityTest {
@@ -21,8 +19,22 @@ public class FormActivityTest {
     }
 
     @Test
-    public void testOnCreate() throws Exception {
-        Assertions.assertThat(activity.loginEditText).isNotNull();
-        assertThat(activity.loginEditText).isVisible();
+    public void should_be_state_connection_needed() throws Exception {
+        Assertions.assertThat(activity.loginEditText).isVisible();
+        Assertions.assertThat(activity.passwordEditText).isVisible();
+        Assertions.assertThat(activity.connectButton).isVisible();
+    }
+
+    @Test
+    public void should_be_disable_on_state_connected() throws Exception {
+        // Given
+
+        // When
+        activity.setStateLogged();
+
+        // Then
+        Assertions.assertThat(activity.loginEditText).isDisabled();
+        Assertions.assertThat(activity.passwordEditText).isDisabled();
+        Assertions.assertThat(activity.connectButton).isDisabled();
     }
 }

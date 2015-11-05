@@ -21,6 +21,10 @@ public class FormActivity extends Activity {
     @VisibleForTesting
     Button connectButton;
 
+    //region mvp
+    FormPresenter presenter = new FormPresenter(this);
+    //endregion
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,19 +44,22 @@ public class FormActivity extends Activity {
         setStateLoginNeeded();
     }
 
-    private void setStateLoginNeeded() {
+    @VisibleForTesting
+    void setStateLoginNeeded() {
         loginEditText.setEnabled(true);
         passwordEditText.setEnabled(true);
         connectButton.setEnabled(true);
     }
 
-    private void setStateLogged() {
+    @VisibleForTesting
+    void setStateLogged() {
         loginEditText.setEnabled(false);
         passwordEditText.setEnabled(false);
         connectButton.setEnabled(false);
     }
 
     private void checkForm() {
+        //region no mvp
         String login = loginEditText.getText().toString();
         String password = passwordEditText.getText().toString();
 
@@ -60,9 +67,16 @@ public class FormActivity extends Activity {
             Toast.makeText(this, R.string.toast_success_login, Toast.LENGTH_SHORT).show();
             setStateLogged();
         }
+        //endregion
+
+        //region mvp
+        presenter.checkForm(loginEditText.getText().toString(), passwordEditText.getText().toString());
+        //endregion
     }
 
+    //region no mvp
     private boolean isValid(String text) {
         return text != null && text.length() > 3;
     }
+    //endregion
 }
