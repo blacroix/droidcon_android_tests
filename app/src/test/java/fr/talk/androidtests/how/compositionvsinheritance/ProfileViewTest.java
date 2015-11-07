@@ -46,9 +46,10 @@ public class ProfileViewTest {
     @Test
     public void testUpdateName_small() throws Exception {
         // Given
+        Profile profile = new Profile("Jo");
 
         // When
-        view.updateName(new Profile("Jo"));
+        view.updateName(profile);
 
         // Then
         Mockito.verify(textView).setText("A short name: Jo");
@@ -58,7 +59,7 @@ public class ProfileViewTest {
         //endregion
 
         //region composition way
-        Mockito.verify(viewManager).updateView(null, textView);
+        Mockito.verify(viewManager).manageVisibility(profile, textView);
         //endregion
     }
 

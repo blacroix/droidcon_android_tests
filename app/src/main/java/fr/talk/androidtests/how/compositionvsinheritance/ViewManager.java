@@ -4,7 +4,7 @@ import android.view.View;
 
 public class ViewManager {
 
-    public void updateView(Object obj, View view) {
+    public void manageVisibility(Object obj, View view) {
         if (obj == null) {
             view.setVisibility(View.GONE);
         } else {

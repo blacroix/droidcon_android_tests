@@ -12,9 +12,8 @@ public class AppTest {
         App lowRateApp = new App("com.test", 2.2f);
         App highRateApp = new App("com.google", 4.1f);
 
-        float compareTo = lowRateApp.compareTo(highRateApp);
-
         //region
+        float compareTo = lowRateApp.compareTo(highRateApp);
         Assert.assertTrue(compareTo < 1);
         //endregion
 
