@@ -9,9 +9,9 @@ import fr.talk.androidtests.R;
 
 public class ProfileView extends BaseView {
 
+    TextView nameTextView;
 
     //region composition view manager
-    TextView nameTextView;
     ViewManager viewManager = new ViewManager();
     //endregion
 

@@ -26,8 +26,6 @@ public class PersonTest {
         new Person(-1);
     }
 
-
-
     @Rule
     public InitMockAnnotationsRule mockRule =  new InitMockAnnotationsRule(this);
 

@@ -50,7 +50,7 @@ public class FormPresenterTest {
 
         // Then
         //region
-        Mockito.verifyNoMoreInteractions(messenger);
+        Mockito.verifyZeroInteractions(messenger);
         //endregion
         //region
         Mockito.verify(activity).setStateLoginNeeded();
