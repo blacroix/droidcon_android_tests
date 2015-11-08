@@ -34,7 +34,7 @@ public class ProfileActivity extends Activity {
     }
 
     //region Profile manager
-    private static class ProfileManager {
+    static class ProfileManager {
         private final Context context;
 
         private ProfileManager(Context context) {
