@@ -1,6 +1,7 @@
 package fr.talk.androidtests.how.objvsstatic;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -31,4 +32,14 @@ public class ProfileActivity extends Activity {
             profileNameTextView.setText(name);
         }
     }
+
+    //region Profile manager
+    private static class ProfileManager {
+        private final Context context;
+
+        private ProfileManager(Context context) {
+            this.context = context;
+        }
+    }
+    //endregion
 }
