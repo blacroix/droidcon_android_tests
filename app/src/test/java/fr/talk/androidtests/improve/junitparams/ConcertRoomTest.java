@@ -4,7 +4,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import junitparams.JUnitParamsRunner;
-import junitparams.Parameters;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -12,18 +11,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ConcertRoomTest {
 
     @Test
-    @Parameters(source = ConcertRoomTestDataProvider.class, method = "provideCapacityTestData")
-    public void concert_room_is_full(int maxAvailablePlaces, int spectatorsCount, boolean full) throws Exception {
+    public void concert_room_is_full() throws Exception {
         // Given
-        ConcertRoom concertRoom = new ConcertRoom(maxAvailablePlaces);
+        ConcertRoom concertRoom = new ConcertRoom(15);
 
         // When
-        concertRoom.setSpectatorsCount(spectatorsCount);
+        concertRoom.setSpectatorsCount(15);
 
         // Then
-        assertThat(concertRoom.isFull()).isEqualTo(full);
+        assertThat(concertRoom.isFull()).isEqualTo(true);
     }
 
+    //region Data provider
     public static class ConcertRoomTestDataProvider {
         public static Object[] provideCapacityTestData() {
             return new Object[]{
@@ -32,6 +31,7 @@ public class ConcertRoomTest {
             };
         }
     }
+    //endregion
 
 
 }

@@ -16,8 +16,10 @@ public class AppStoreTest {
 
         AppStore appStore = new AppStore(Arrays.asList(app, sameApp));
 
+        //region
         Assert.assertEquals(1, appStore.getApps().size());
         Assert.assertEquals(app, appStore.getApps().get(0));
+        //endregion
 
         //region assertJ
         Assertions.assertThat(appStore.getApps())
