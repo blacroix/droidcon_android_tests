@@ -10,6 +10,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(JUnitParamsRunner.class)
 public class ConcertRoomTest {
 
+    //region
+        // @Parameters({"15, 15, true"})
+    //endregion
+
     @Test
     public void concert_room_is_full() throws Exception {
         // Given

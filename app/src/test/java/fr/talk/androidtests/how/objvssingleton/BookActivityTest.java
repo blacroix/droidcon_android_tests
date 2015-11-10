@@ -25,7 +25,6 @@ public class BookActivityTest {
     @Test
     public void testUpdateBookName_unknown() throws Exception {
         // Given
-        // TODO How to set singleton book name to null?
 
         // When
         activity.updateBookName();
@@ -39,7 +38,6 @@ public class BookActivityTest {
     @Test
     public void testUpdateBookName_known() throws Exception {
         // Given
-        // TODO How to set singleton book name?
 
         // When
         activity.updateBookName();

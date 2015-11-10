@@ -5,7 +5,7 @@ public class Person {
     private final int age;
 
     public Person(int age) {
-        if(age < 0){
+        if (age < 0) {
             throw new IllegalArgumentException("Age must be positive");
         }
 

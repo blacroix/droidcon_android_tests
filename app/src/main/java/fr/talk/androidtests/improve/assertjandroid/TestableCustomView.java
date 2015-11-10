@@ -14,13 +14,11 @@ public class TestableCustomView extends LinearLayout {
     TextView errorView;
 
     public TestableCustomView(Context context) {
-        super(context);
-        init();
+        this(context, null);
     }
 
     public TestableCustomView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init();
+        this(context, attrs, 0);
     }
 
     public TestableCustomView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -40,13 +38,13 @@ public class TestableCustomView extends LinearLayout {
         errorView = (TextView) findViewById(R.id.error);
     }
 
-    public void showMessage(String message){
+    public void showMessage(String message) {
         messageView.setText(message);
         messageView.setVisibility(VISIBLE);
         errorView.setVisibility(GONE);
     }
 
-    public void showError(String message){
+    public void showError(String message) {
         errorView.setText(message);
         errorView.setVisibility(VISIBLE);
         messageView.setVisibility(GONE);

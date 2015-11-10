@@ -16,13 +16,13 @@ public class ConcertRoom {
     }
 
     public void setSpectatorsCount(int spectatorsCount) {
-        if(spectatorsCount < 0 || spectatorsCount > maxAvailablePlaces){
+        if (spectatorsCount < 0 || spectatorsCount > maxAvailablePlaces) {
             throw new IllegalArgumentException("Too many spectators for this room");
         }
         this.spectatorsCount = spectatorsCount;
     }
 
-    public boolean isFull(){
+    public boolean isFull() {
         return spectatorsCount == maxAvailablePlaces;
     }
 }
