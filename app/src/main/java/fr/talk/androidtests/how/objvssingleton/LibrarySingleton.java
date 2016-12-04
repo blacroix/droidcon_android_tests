@@ -2,7 +2,9 @@ package fr.talk.androidtests.how.objvssingleton;
 
 class LibrarySingleton {
 
-    private static final LibrarySingleton instance = new LibrarySingleton();
+    private static final LibrarySingleton instance =
+            new LibrarySingleton();
+
     private String name;
 
     private LibrarySingleton() {

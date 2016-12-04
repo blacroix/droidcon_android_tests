@@ -1,10 +1,10 @@
 package fr.talk.androidtests.improve.junitrule;
 
-public class Person {
+class Person {
 
     private final int age;
 
-    public Person(int age) {
+    Person(int age) {
         if (age < 0) {
             throw new IllegalArgumentException("Age must be positive");
         }
@@ -12,7 +12,7 @@ public class Person {
         this.age = age;
     }
 
-    public int getAge() {
+    int getAge() {
         return age;
     }
 }

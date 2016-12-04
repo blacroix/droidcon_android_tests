@@ -21,7 +21,9 @@ public abstract class BaseView extends LinearLayout {
         this(context, attrs, 0);
     }
 
-    public BaseView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public BaseView(Context context,
+                    AttributeSet attrs,
+                    int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         inflate(getContext(), R.layout.custom_view, this);
 

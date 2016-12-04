@@ -12,6 +12,7 @@ public class ConcertRoomTest {
 
     //region
         // @Parameters({"15, 15, true"})
+        // @Parameters(source = ConcertRoomTestDataProvider.class, method = "provideCapacityTestData")
     //endregion
 
     @Test

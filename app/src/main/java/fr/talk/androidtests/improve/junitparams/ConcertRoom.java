@@ -10,7 +10,6 @@ class ConcertRoom {
         this.maxAvailablePlaces = maxAvailablePlaces;
     }
 
-
     public int getSpectatorsCount() {
         return spectatorsCount;
     }
