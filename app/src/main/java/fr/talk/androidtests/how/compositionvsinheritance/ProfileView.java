@@ -29,11 +29,8 @@ public class ProfileView extends BaseView {
 
     public ProfileView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        //region composition view manager
         inflate(getContext(), R.layout.custom_view, this);
-
         nameTextView = (TextView) findViewById(R.id.nameTextView);
-        //endregion
     }
 
     @SuppressLint("SetTextI18n")

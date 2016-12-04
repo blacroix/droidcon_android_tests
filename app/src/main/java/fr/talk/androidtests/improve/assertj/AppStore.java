@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class AppStore {
+class AppStore {
 
     private final List<App> apps = new ArrayList<>();
 
-    public AppStore(List<App> apps) {
+    AppStore(List<App> apps) {
         this.apps.addAll(new HashSet<>(apps));
     }
 
-    public List<App> getApps() {
+    List<App> getApps() {
         return apps;
     }
 }

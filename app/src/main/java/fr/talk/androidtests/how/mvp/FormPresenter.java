@@ -5,7 +5,7 @@ import android.support.annotation.VisibleForTesting;
 import fr.talk.androidtests.R;
 import fr.talk.androidtests.how.compositionvsinheritance.Messenger;
 
-public class FormPresenter {
+class FormPresenter {
 
     private final FormActivity activity;
     private final Messenger messenger;
@@ -18,12 +18,12 @@ public class FormPresenter {
     }
     //endregion
 
-    public FormPresenter(FormActivity activity) {
+    FormPresenter(FormActivity activity) {
         this.activity = activity;
         this.messenger = new Messenger(activity);
     }
 
-    public void checkForm(String username, String password) {
+    void checkForm(String username, String password) {
         if (isValid(username) && isValid(password)) {
             //region
             activity.setStateLogged();
@@ -37,7 +37,7 @@ public class FormPresenter {
     }
 
     @VisibleForTesting
-    boolean isValid(String value) {
+    private boolean isValid(String value) {
         //region
         return value != null && value.length() > 3;
         //endregion

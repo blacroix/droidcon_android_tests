@@ -13,8 +13,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class BookActivityTest {
 
-    BookActivity activity;
-    TextView textView = Mockito.mock(TextView.class);
+    private BookActivity activity;
+    private TextView textView = Mockito.mock(TextView.class);
 
     @Before
     public void setUp() throws Exception {

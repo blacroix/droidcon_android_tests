@@ -16,16 +16,16 @@ import fr.talk.androidtests.R;
 @RunWith(CustomRobolectricTestRunner.class)
 public class ProfileViewTest {
 
-    ProfileView view;
+    private ProfileView view;
 
-    TextView textView = Mockito.mock(TextView.class);
+    private TextView textView = Mockito.mock(TextView.class);
 
     //region composition view manager
-    ViewManager viewManager = Mockito.mock(ViewManager.class);
+    private ViewManager viewManager = Mockito.mock(ViewManager.class);
     //endregion
 
     //region composition messenger
-    Messenger messenger = Mockito.mock(Messenger.class);
+    private Messenger messenger = Mockito.mock(Messenger.class);
     //endregion
 
     @Before

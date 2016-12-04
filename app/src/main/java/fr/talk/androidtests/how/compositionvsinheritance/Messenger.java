@@ -11,7 +11,7 @@ public class Messenger {
         this.context = context;
     }
 
-    public void showMessage(String message) {
+    void showMessage(String message) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 

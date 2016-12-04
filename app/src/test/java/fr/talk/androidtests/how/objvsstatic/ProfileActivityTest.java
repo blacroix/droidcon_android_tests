@@ -14,7 +14,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class ProfileActivityTest {
 
-    ProfileActivity activity;
+    private ProfileActivity activity;
 
     @Mock
     TextView textView;

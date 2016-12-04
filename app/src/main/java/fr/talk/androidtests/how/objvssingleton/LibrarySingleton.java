@@ -1,6 +1,6 @@
 package fr.talk.androidtests.how.objvssingleton;
 
-public class LibrarySingleton {
+class LibrarySingleton {
 
     private static final LibrarySingleton instance = new LibrarySingleton();
     private String name;
@@ -9,7 +9,7 @@ public class LibrarySingleton {
         name = "Garry Poker";
     }
 
-    public static LibrarySingleton getInstance() {
+    static LibrarySingleton getInstance() {
         return instance;
     }
 

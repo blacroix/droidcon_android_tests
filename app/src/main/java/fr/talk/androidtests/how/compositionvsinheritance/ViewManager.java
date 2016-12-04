@@ -2,9 +2,9 @@ package fr.talk.androidtests.how.compositionvsinheritance;
 
 import android.view.View;
 
-public class ViewManager {
+class ViewManager {
 
-    public void manageVisibility(Object obj, View view) {
+    void manageVisibility(Object obj, View view) {
         if (obj == null) {
             view.setVisibility(View.GONE);
         } else {

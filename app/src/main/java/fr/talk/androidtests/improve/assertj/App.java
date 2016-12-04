@@ -3,12 +3,12 @@ package fr.talk.androidtests.improve.assertj;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-public class App implements Comparable<App> {
+class App implements Comparable<App> {
 
     private final String packageName;
     private final float note;
 
-    public App(@NonNull String packageName, float note) {
+    App(@NonNull String packageName, float note) {
         this.packageName = packageName;
         this.note = note;
     }

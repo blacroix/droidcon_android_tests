@@ -1,10 +1,10 @@
 package fr.talk.androidtests.how.compositionvsinheritance;
 
-public class Profile {
+class Profile {
 
     private String name;
 
-    public Profile(String name) {
+    Profile(String name) {
         this.name = name;
     }
 
