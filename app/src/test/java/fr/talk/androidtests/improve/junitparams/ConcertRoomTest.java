@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 
 import junitparams.JUnitParamsRunner;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Java6Assertions.assertThat;
 
 @RunWith(JUnitParamsRunner.class)
 public class ConcertRoomTest {

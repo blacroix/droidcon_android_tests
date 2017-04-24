@@ -44,14 +44,12 @@ public class FormActivity extends Activity {
         setStateLoginNeeded();
     }
 
-    @VisibleForTesting
     void setStateLoginNeeded() {
         loginEditText.setEnabled(true);
         passwordEditText.setEnabled(true);
         connectButton.setEnabled(true);
     }
 
-    @VisibleForTesting
     void setStateLogged() {
         loginEditText.setEnabled(false);
         passwordEditText.setEnabled(false);

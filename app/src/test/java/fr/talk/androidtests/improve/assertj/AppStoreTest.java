@@ -2,10 +2,11 @@ package fr.talk.androidtests.improve.assertj;
 
 import junit.framework.Assert;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 import java.util.Arrays;
+
+import static org.assertj.core.api.Java6Assertions.assertThat;
 
 public class AppStoreTest {
 
@@ -16,13 +17,13 @@ public class AppStoreTest {
 
         AppStore appStore = new AppStore(Arrays.asList(app, sameApp));
 
-        //region
+        //region default assertion
         Assert.assertEquals(1, appStore.getApps().size());
         Assert.assertEquals(app, appStore.getApps().get(0));
         //endregion
 
         //region assertJ
-        Assertions.assertThat(appStore.getApps())
+        assertThat(appStore.getApps())
                 .overridingErrorMessage("Should keep only first duplicate")
                 .containsExactly(app);
         //endregion

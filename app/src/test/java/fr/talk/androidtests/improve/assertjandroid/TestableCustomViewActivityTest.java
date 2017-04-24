@@ -1,5 +1,6 @@
 package fr.talk.androidtests.improve.assertjandroid;
 
+import android.os.Build;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -9,12 +10,15 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
+import org.robolectric.annotation.Config;
 
-import fr.talk.androidtests.CustomRobolectricTestRunner;
+import fr.talk.androidtests.BuildConfig;
 
 import static org.assertj.android.api.Assertions.assertThat;
 
-@RunWith(CustomRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
+@Config(sdk = Build.VERSION_CODES.LOLLIPOP, constants = BuildConfig.class)
 public class TestableCustomViewActivityTest {
 
     private TestableCustomView customView;
@@ -29,7 +33,7 @@ public class TestableCustomViewActivityTest {
     public void should_show_message() throws Exception {
         customView.showMessage("Message");
 
-        //region
+        //region assert
         Assert.assertEquals(2, customView.getChildCount());
 
         Assert.assertEquals(LinearLayout.VERTICAL, customView.getOrientation());

@@ -9,18 +9,17 @@ import org.junit.runner.RunWith;
 import org.junit.runners.model.Statement;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 
-import fr.talk.androidtests.CustomRobolectricTestRunner;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 //region
-@RunWith(CustomRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 //endregion
 public class PersonTest {
 
-    //region
+    //region ExpectedException
     @Rule
     public ExpectedException thrown = ExpectedException.none();
 
@@ -34,7 +33,7 @@ public class PersonTest {
     }
     //endregion
 
-    //region Mockito rule
+    //region Rule Mockito and Robolectric
     @Rule
     public InitMockAnnotationsRule mockRule =  new InitMockAnnotationsRule(this);
 

@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "23.0.3"
+    buildToolsVersion "25.0.2"
 
     defaultConfig {
         applicationId "fr.talk.androidtests"
@@ -26,8 +26,8 @@ dependencies {
 
     //region Project dependencies
     compile(
-            'com.android.support:appcompat-v7:23.1.0',
-            'com.android.support:support-annotations:23.1.0'
+            'com.android.support:appcompat-v7:25.3.1',
+            'com.android.support:support-annotations:25.3.1'
     )
     //endregion
 
@@ -35,7 +35,7 @@ dependencies {
     testCompile(
             'junit:junit:4.12',
             'org.mockito:mockito-core:1.10.19',
-            'org.robolectric:robolectric:3.0',
+            'org.robolectric:robolectric:3.3.2',
             'pl.pragmatists:JUnitParams:1.0.4'
     )
 
@@ -45,7 +45,7 @@ dependencies {
     //endregion
 
     //region UT test dependencies
-    androidTestCompile('com.android.support.test:rules:0.4') {
+    androidTestCompile('com.android.support.test:rules:0.4.1') {
         exclude module: 'support-annotations'
     }
 
@@ -53,7 +53,7 @@ dependencies {
         exclude module: 'support-annotations'
     }
 
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.1') {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2') {
         exclude module: 'support-annotations'
     }
     //endregion
