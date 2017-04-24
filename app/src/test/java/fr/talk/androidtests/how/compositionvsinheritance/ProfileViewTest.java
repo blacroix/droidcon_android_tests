@@ -1,6 +1,7 @@
 package fr.talk.androidtests.how.compositionvsinheritance;
 
 import android.annotation.SuppressLint;
+import android.os.Build;
 import android.view.View;
 import android.widget.TextView;
 
@@ -10,10 +11,13 @@ import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.annotation.Config;
 
+import fr.talk.androidtests.BuildConfig;
 import fr.talk.androidtests.R;
 
 @RunWith(RobolectricTestRunner.class)
+@Config(sdk = Build.VERSION_CODES.LOLLIPOP, constants = BuildConfig.class)
 public class ProfileViewTest {
 
     private ProfileView view;
@@ -49,7 +53,7 @@ public class ProfileViewTest {
         Profile profile = new Profile("Jo");
 
         // When
-        view.updateName(profile);
+        view.toggleVisibility(profile);
 
         // Then
         Mockito.verify(textView).setText("A short name: Jo");

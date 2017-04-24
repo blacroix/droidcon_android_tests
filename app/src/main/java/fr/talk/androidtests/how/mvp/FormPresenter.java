@@ -10,7 +10,7 @@ class FormPresenter {
     private final FormActivity activity;
     private final Messenger messenger;
 
-    //region
+    //region constructor for test
     @VisibleForTesting
     FormPresenter(FormActivity activity, Messenger messenger) {
         this.activity = activity;
@@ -25,12 +25,12 @@ class FormPresenter {
 
     void checkForm(String username, String password) {
         if (isValid(username) && isValid(password)) {
-            //region
+            //region state logged
             activity.setStateLogged();
             messenger.showMessage(R.string.toast_success_login);
             //endregion
         } else {
-            //region
+            //region state login needed
             activity.setStateLoginNeeded();
             //endregion
         }
@@ -38,7 +38,7 @@ class FormPresenter {
 
     @VisibleForTesting
     private boolean isValid(String value) {
-        //region
+        //region check login
         return value != null && value.length() > 3;
         //endregion
     }

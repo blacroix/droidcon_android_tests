@@ -30,7 +30,7 @@ public abstract class BaseView extends LinearLayout {
         nameTextView = (TextView) findViewById(R.id.nameTextView);
     }
 
-    public void updateName(Profile profile) {
+    public void toggleVisibility(Profile profile) {
         if (profile == null) {
             nameTextView.setVisibility(GONE);
         } else {

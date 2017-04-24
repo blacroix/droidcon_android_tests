@@ -35,8 +35,8 @@ public class ProfileView extends BaseView {
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void updateName(Profile profile) {
-        super.updateName(profile);
+    public void toggleVisibility(Profile profile) {
+        super.toggleVisibility(profile);
         if (profile != null) {
             if (profile.getName().length() > 3) {
                 nameTextView.setText("A long name: " + profile.getName());

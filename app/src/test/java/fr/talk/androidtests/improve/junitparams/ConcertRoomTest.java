@@ -10,7 +10,7 @@ import static org.assertj.core.api.Java6Assertions.assertThat;
 @RunWith(JUnitParamsRunner.class)
 public class ConcertRoomTest {
 
-    //region
+    //region parameters
         // @Parameters({"15, 15, true"})
         // @Parameters(source = ConcertRoomTestDataProvider.class, method = "provideCapacityTestData")
     //endregion
@@ -27,7 +27,7 @@ public class ConcertRoomTest {
         assertThat(concertRoom.isFull()).isEqualTo(true);
     }
 
-    //region Data provider
+    //region data provider
     public static class ConcertRoomTestDataProvider {
         public static Object[] provideCapacityTestData() {
             return new Object[]{
@@ -37,6 +37,5 @@ public class ConcertRoomTest {
         }
     }
     //endregion
-
 
 }
