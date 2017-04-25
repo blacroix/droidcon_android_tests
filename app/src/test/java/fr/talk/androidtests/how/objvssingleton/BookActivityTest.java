@@ -1,6 +1,7 @@
 package fr.talk.androidtests.how.objvssingleton;
 
 import android.annotation.SuppressLint;
+import android.os.Build;
 import android.view.View;
 import android.widget.TextView;
 
@@ -9,8 +10,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
+import org.robolectric.annotation.Config;
+
+import fr.talk.androidtests.BuildConfig;
 
 @RunWith(MockitoJUnitRunner.class)
+@Config(sdk = Build.VERSION_CODES.LOLLIPOP,
+        constants = BuildConfig.class)
 public class BookActivityTest {
 
     private BookActivity activity;

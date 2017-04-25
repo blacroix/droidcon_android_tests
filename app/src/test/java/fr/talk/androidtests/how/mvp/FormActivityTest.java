@@ -1,13 +1,20 @@
 package fr.talk.androidtests.how.mvp;
 
+import android.os.Build;
+
 import org.assertj.android.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.annotation.Config;
+
+import fr.talk.androidtests.BuildConfig;
 
 @RunWith(RobolectricTestRunner.class)
+@Config(sdk = Build.VERSION_CODES.LOLLIPOP,
+        constants = BuildConfig.class)
 public class FormActivityTest {
 
     private FormActivity activity;
