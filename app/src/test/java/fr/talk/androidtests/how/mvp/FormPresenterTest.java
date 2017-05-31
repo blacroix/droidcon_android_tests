@@ -10,17 +10,17 @@ import org.mockito.runners.MockitoJUnitRunner;
 import fr.talk.androidtests.R;
 import fr.talk.androidtests.how.compositionvsinheritance.Messenger;
 
-//region
+//region @RunWith
 @RunWith(MockitoJUnitRunner.class)
 //endregion
 public class FormPresenterTest {
 
-    //region
+    //region Mock annotation
     @Mock FormActivity activity;
     @Mock Messenger messenger;
     //endregion
 
-    //region
+    //region Mock injection
     @InjectMocks
     FormPresenter presenter;
     //endregion
@@ -33,10 +33,11 @@ public class FormPresenterTest {
         presenter.checkForm("john", "powered");
 
         // Then
-        //region
+        //region showMessage()
         Mockito.verify(messenger).showMessage(R.string.toast_success_login);
         //endregion
-        //region
+
+        //region setStateLogged()
         Mockito.verify(activity).setStateLogged();
         //endregion
     }
@@ -49,10 +50,11 @@ public class FormPresenterTest {
         presenter.checkForm("a", "powered");
 
         // Then
-        //region
+        //region verifyZeroInteractions()
         Mockito.verifyZeroInteractions(messenger);
         //endregion
-        //region
+
+        //region setStateLoginNeeded()
         Mockito.verify(activity).setStateLoginNeeded();
         //endregion
     }

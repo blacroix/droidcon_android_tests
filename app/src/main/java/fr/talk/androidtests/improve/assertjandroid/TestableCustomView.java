@@ -43,10 +43,4 @@ public class TestableCustomView extends LinearLayout {
         messageView.setVisibility(VISIBLE);
         errorView.setVisibility(GONE);
     }
-
-    public void showError(String message) {
-        errorView.setText(message);
-        errorView.setVisibility(VISIBLE);
-        messageView.setVisibility(GONE);
-    }
 }
